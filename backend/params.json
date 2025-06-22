@@ -1,0 +1,732 @@
+[
+    {
+      "name": "game_setting",
+      "description": "Thematic backdrop for the entire game: 0-Realistic Modern, 1-Sci-Fi Space, 2-High Fantasy, 3-Post-Apocalyptic, 4-Cyberpunk, 5-Mythological.",
+      "min_value": 0,
+      "max_value": 5,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 3,
+      "default_value": 1,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "map_size",
+      "description": "Size of the map. 100 is small maps like in qake, 1000 is big maps like in battle royale",
+      "min_value": 100,
+      "max_value": 1000,
+      "reccomended_min_value": 100,
+      "reccomended_max_value": 1000,
+      "default_value": 100,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "have_battle_royale_mode",
+      "description": "If the game has battle royale mode",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 0,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "progression_structure",
+      "description": "How content unlocks: 0-Linear Levels, 1-Hub & Spoke, 2-Open World, 3-Roguelike Runs.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 2,
+      "default_value": 0,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "level_count",
+      "description": "Total number of discrete stages or areas.",
+      "min_value": 1,
+      "max_value": 200,
+      "reccomended_min_value": 5,
+      "reccomended_max_value": 50,
+      "default_value": 10,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "level_length_variance",
+      "description": "Percent variation in average level duration (0-100 %).",
+      "min_value": 0,
+      "max_value": 100,
+      "reccomended_min_value": 10,
+      "reccomended_max_value": 40,
+      "default_value": 20,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "checkpoint_strategy",
+      "description": "How progress is saved: 0-Fixed Points, 1-Dynamic Auto, 2-Manual Save Stations, 3-No Checkpoints.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "failure_penalty",
+      "description": "Consequence of defeat: 0-None, 1-Resource Loss, 2-Level Restart, 3-Permadeath.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "dynamic_difficulty",
+      "description": "Adaptive difficulty toggle: 0-Off, 1-On.",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 1,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "difficulty_curve",
+      "description": "Shape of challenge escalation: 0-Flat, 1-Linear, 2-Exponential, 3-Plateau-Ramp.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "randomness_intensity",
+      "description": "Degree of procedural randomness: 0-None, 1-Low, 2-Medium, 3-High.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "enemy_density",
+      "description": "Average enemies per 100 m² of playspace.",
+      "min_value": 0,
+      "max_value": 100,
+      "reccomended_min_value": 10,
+      "reccomended_max_value": 40,
+      "default_value": 25,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "safe_zone_ratio",
+      "description": "Percent of space designated as low-threat safe areas.",
+      "min_value": 0,
+      "max_value": 100,
+      "reccomended_min_value": 5,
+      "reccomended_max_value": 20,
+      "default_value": 10,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "powerup_frequency",
+      "description": "Power-ups spawned per 10 min of play.",
+      "min_value": 0,
+      "max_value": 60,
+      "reccomended_min_value": 3,
+      "reccomended_max_value": 15,
+      "default_value": 6,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "powerup_variance",
+      "description": "Diversity of power-ups: 0-None, 1-Low, 2-Medium, 3-High.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "upgrade_depth",
+      "description": "Number of tiers in any global upgrade tree.",
+      "min_value": 0,
+      "max_value": 10,
+      "reccomended_min_value": 2,
+      "reccomended_max_value": 5,
+      "default_value": 3,
+      "apply_to": "shooter"
+    },
+    {
+      "name": "upgrade_branching_factor",
+      "description": "Average branches per tier in progression tree.",
+      "min_value": 1,
+      "max_value": 5,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 3,
+      "default_value": 2,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "unlock_interval",
+      "description": "Seconds between major new ability or feature unlocks.",
+      "min_value": 30,
+      "max_value": 3600,
+      "reccomended_min_value": 60,
+      "reccomended_max_value": 600,
+      "default_value": 300,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "objective_density",
+      "description": "Primary objectives per level.",
+      "min_value": 1,
+      "max_value": 20,
+      "reccomended_min_value": 2,
+      "reccomended_max_value": 6,
+      "default_value": 4,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "objective_variety",
+      "description": "Variation of objective types: 0-Low, 1-Medium, 2-High.",
+      "min_value": 0,
+      "max_value": 2,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "cutscene_frequency",
+      "description": "Cut-scenes triggered per hour.",
+      "min_value": 0,
+      "max_value": 12,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 4,
+      "default_value": 2,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "dialogue_choice_depth",
+      "description": "Complexity of player dialogue: 0-None, 1-Simple, 2-Branching, 3-Multi-Layer.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "branching_endings",
+      "description": "Total unique endings reachable.",
+      "min_value": 1,
+      "max_value": 10,
+      "reccomended_min_value": 2,
+      "reccomended_max_value": 4,
+      "default_value": 3,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "time_scale",
+      "description": "Global time-dilation multiplier (1.0 = normal speed).",
+      "min_value": 0.5,
+      "max_value": 2.0,
+      "reccomended_min_value": 0.8,
+      "reccomended_max_value": 1.2,
+      "default_value": 1.0,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "gravity_scale",
+      "description": "Multiplier applied to world gravity.",
+      "min_value": 0.2,
+      "max_value": 4.0,
+      "reccomended_min_value": 0.8,
+      "reccomended_max_value": 1.5,
+      "default_value": 1.0,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "movement_speed_scale",
+      "description": "Multiplier on base player movement speed.",
+      "min_value": 0.5,
+      "max_value": 3.0,
+      "reccomended_min_value": 0.8,
+      "reccomended_max_value": 1.5,
+      "default_value": 1.0,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "jump_emphasis",
+      "description": "Importance of vertical traversal: 0-None, 1-Low, 2-Medium, 3-High.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "combat_pace",
+      "description": "Combat style: 0-Turn-Based, 1-RTw/Pause, 2-Real-Time.",
+      "min_value": 0,
+      "max_value": 2,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "ai_difficulty_style",
+      "description": "AI scaling method: 0-Static, 1-Scaling, 2-Adaptive, 3-Procedural Random.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "stealth_emphasis",
+      "description": "Role of stealth: 0-None, 1-Optional, 2-Core Mechanic.",
+      "min_value": 0,
+      "max_value": 2,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 0,
+      "apply_to": "platformer"
+    },
+    {
+      "name": "exploration_reward_rate",
+      "description": "Average rewards per minute of pure exploration.",
+      "min_value": 0,
+      "max_value": 10,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 4,
+      "default_value": 2,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "secret_discovery_ratio",
+      "description": "Percent of total content hidden as secrets.",
+      "min_value": 0,
+      "max_value": 50,
+      "reccomended_min_value": 5,
+      "reccomended_max_value": 20,
+      "default_value": 10,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "respawn_method",
+      "description": "Where the player re-enters after defeat: 0-Checkpoint, 1-Level Start, 2-Last Safe Position, 3-Permadeath.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 2,
+      "default_value": 0,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "permadeath_enabled",
+      "description": "Hardcore permadeath toggle: 0-No, 1-Yes.",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 0,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "resource_abundance",
+      "description": "Scarcity of core resources: 0-Scarce, 1-Low, 2-Normal, 3-High.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "crafting_complexity",
+      "description": "Depth of crafting systems: 0-None, 1-Basic, 2-Intermediate, 3-Deep.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "inventory_limit",
+      "description": "Maximum distinct items the player can carry.",
+      "min_value": 0,
+      "max_value": 500,
+      "reccomended_min_value": 50,
+      "reccomended_max_value": 150,
+      "default_value": 100,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "economy_inflation_rate",
+      "description": "Percent price change per in-game hour.",
+      "min_value": 0,
+      "max_value": 100,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 10,
+      "default_value": 5,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "score_multiplier_base",
+      "description": "Global base score multiplier.",
+      "min_value": 0.5,
+      "max_value": 5.0,
+      "reccomended_min_value": 1.0,
+      "reccomended_max_value": 2.0,
+      "default_value": 1.0,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "bonus_objective_frequency",
+      "description": "Optional bonus objectives per level.",
+      "min_value": 0,
+      "max_value": 5,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 3,
+      "default_value": 2,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "challenge_mode_toggle",
+      "description": "Special challenge mode availability: 0-Off, 1-On.",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 1,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "competitive_mode",
+      "description": "Competitive play: 0-Off, 1-Local, 2-Online.",
+      "min_value": 0,
+      "max_value": 2,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "coop_mode",
+      "description": "Co-operative play: 0-Off, 1-Local, 2-Online.",
+      "min_value": 0,
+      "max_value": 2,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "team_size",
+      "description": "Players per side in any team mode.",
+      "min_value": 1,
+      "max_value": 10,
+      "reccomended_min_value": 2,
+      "reccomended_max_value": 5,
+      "default_value": 4,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "session_target_length",
+      "description": "Intended average play-session (minutes).",
+      "min_value": 1,
+      "max_value": 240,
+      "reccomended_min_value": 15,
+      "reccomended_max_value": 60,
+      "default_value": 30,
+      "apply_to": "rpg"
+    },
+    {
+      "name": "time_limit_mode",
+      "description": "Global timer style: 0-None, 1-Per-Level, 2-Whole-Game Countdown.",
+      "min_value": 0,
+      "max_value": 2,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 0,
+      "apply_to": "runner"
+    },
+    {
+      "name": "boss_frequency",
+      "description": "Boss encounters per hour of normal play.",
+      "min_value": 0,
+      "max_value": 5,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "runner"
+    },
+    {
+      "name": "environmental_hazard_intensity",
+      "description": "Severity of stage hazards: 0-None, 1-Low, 2-Medium, 3-High.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "runner"
+    },
+    {
+      "name": "random_events_frequency",
+      "description": "Dynamic events per hour.",
+      "min_value": 0,
+      "max_value": 20,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 6,
+      "default_value": 3,
+      "apply_to": "runner"
+    },
+    {
+      "name": "collectibles_required_ratio",
+      "description": "Percent of collectibles needed for 100 % completion.",
+      "min_value": 0,
+      "max_value": 100,
+      "reccomended_min_value": 10,
+      "reccomended_max_value": 50,
+      "default_value": 30,
+      "apply_to": "runner"
+    },
+    {
+      "name": "score_ceiling",
+      "description": "Maximum attainable score in a single run.",
+      "min_value": 1000,
+      "max_value": 100000,
+      "reccomended_min_value": 10000,
+      "reccomended_max_value": 50000,
+      "default_value": 20000,
+      "apply_to": "runner"
+    },
+    {
+      "name": "combo_reset_time",
+      "description": "Seconds the player has to extend a combo before it resets.",
+      "min_value": 0.5,
+      "max_value": 10.0,
+      "reccomended_min_value": 2.0,
+      "reccomended_max_value": 5.0,
+      "default_value": 3.0,
+      "apply_to": "runner"
+    },
+    {
+      "name": "streak_multiplier_step",
+      "description": "Percent score multiplier gained per consecutive success.",
+      "min_value": 1,
+      "max_value": 50,
+      "reccomended_min_value": 5,
+      "reccomended_max_value": 20,
+      "default_value": 10,
+      "apply_to": "runner"
+    },
+    {
+      "name": "stamina_system_enabled",
+      "description": "Stamina mechanic toggle: 0-Off, 1-On.",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 1,
+      "apply_to": "runner"
+    },
+    {
+      "name": "stamina_regen_rate",
+      "description": "Stamina points regenerated per second.",
+      "min_value": 0,
+      "max_value": 20,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 5,
+      "default_value": 2,
+      "apply_to": "runner"
+    },
+    {
+      "name": "player_handicap_mode",
+      "description": "Accessibility assists: 0-Off, 1-Aim Assist, 2-Damage Assist, 3-Full Assist.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "runner"
+    },
+    {
+      "name": "assist_mode_level",
+      "description": "Strength of active assists: 0-None, 1-Low, 2-Medium, 3-High.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 1,
+      "apply_to": "runner"
+    },
+    {
+      "name": "escalation_rate",
+      "description": "Difficulty increment per minute of survival.",
+      "min_value": 0,
+      "max_value": 5,
+      "reccomended_min_value": 0.3,
+      "reccomended_max_value": 1.5,
+      "default_value": 0.8,
+      "apply_to": "runner"
+    },
+    {
+      "name": "travel_speed_scale",
+      "description": "Multiplier on world traversal speed (vehicles / mounts).",
+      "min_value": 0.5,
+      "max_value": 5.0,
+      "reccomended_min_value": 1.0,
+      "reccomended_max_value": 3.0,
+      "default_value": 1.5,
+      "apply_to": "runner"
+    },
+    {
+      "name": "day_night_cycle_enabled",
+      "description": "Day-night cycle toggle: 0-No, 1-Yes.",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 1,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "day_night_speed",
+      "description": "Real-time minutes for a full day-night cycle.",
+      "min_value": 5,
+      "max_value": 1440,
+      "reccomended_min_value": 20,
+      "reccomended_max_value": 120,
+      "default_value": 60,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "weather_system_enabled",
+      "description": "Dynamic weather toggle: 0-No, 1-Yes.",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 1,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "weather_variability",
+      "description": "Unpredictability of weather patterns: 0-None, 1-Low, 2-Medium, 3-High.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "tutorial_coverage",
+      "description": "Extent of in-game tutorials: 0-None, 1-Basic Controls, 2-Full Systems.",
+      "min_value": 0,
+      "max_value": 2,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "alignment_shift_rate",
+      "description": "Morality points gained or lost per decision (-10 to 10).",
+      "min_value": -10,
+      "max_value": 10,
+      "reccomended_min_value": -3,
+      "reccomended_max_value": 3,
+      "default_value": 0,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "morality_system_scope",
+      "description": "Complexity of ethics: 0-None, 1-Binary Good/Evil, 2-Karma Spectrum, 3-Faction Reputation.",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "status_effect_frequency",
+      "description": "Percent chance any action triggers a status effect.",
+      "min_value": 0,
+      "max_value": 100,
+      "reccomended_min_value": 5,
+      "reccomended_max_value": 25,
+      "default_value": 10,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "procedural_variation_intensity",
+      "description": "Scale of procedural differences between runs (0-3).",
+      "min_value": 0,
+      "max_value": 3,
+      "reccomended_min_value": 1,
+      "reccomended_max_value": 2,
+      "default_value": 2,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "fail_forward_enabled",
+      "description": "Player keeps partial progress on failure: 0-Off, 1-On.",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 1,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "ai_hint_frequency",
+      "description": "Seconds between optional AI hints.",
+      "min_value": 5,
+      "max_value": 600,
+      "reccomended_min_value": 30,
+      "reccomended_max_value": 120,
+      "default_value": 60,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "puzzle_reset_cost",
+      "description": "Score or resource penalty to reset a puzzle.",
+      "min_value": 0,
+      "max_value": 1000,
+      "reccomended_min_value": 10,
+      "reccomended_max_value": 200,
+      "default_value": 50,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "objective_randomization_enabled",
+      "description": "Random objectives each play-through: 0-No, 1-Yes.",
+      "min_value": 0,
+      "max_value": 1,
+      "reccomended_min_value": 0,
+      "reccomended_max_value": 1,
+      "default_value": 1,
+      "apply_to": "puzzle"
+    },
+    {
+      "name": "puzzle_complexity_scale",
+      "description": "Global multiplier on base puzzle complexity.",
+      "min_value": 0.5,
+      "max_value": 3.0,
+      "reccomended_min_value": 0.8,
+      "reccomended_max_value": 1.5,
+      "default_value": 1.0,
+      "apply_to": "puzzle"
+    }
+  ]
