@@ -4,6 +4,7 @@ from state import state
 from game_context import params_settings, GAME_TYPES
 from utils import is_numerical, filter_params, cosine_similarity, get_query_embeddings
 from typing import List
+from duckduckgo_search import DDGS
 import numpy as np
 from google import genai
 from embeddings import all_param_embeddings
@@ -87,3 +88,10 @@ def search_param_tool(queries: List[str], top_n: int = 3) -> str:
         return f"An error occurred during search: {e}"
     
     
+def duckduckgo_search_tool(query: str) -> str:
+    """Use this tool to find anything you need in web."""
+    results: list[dict[str, str]] = DDGS().text(query, max_results=3, backend="lite")
+    summarized_results = ""
+    for result in results:
+        summarized_results += f"{result.get('title', '')}: {result.get('href', '')}\n"
+    return summarized_results

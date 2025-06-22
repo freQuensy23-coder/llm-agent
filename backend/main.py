@@ -17,7 +17,7 @@ from google.genai.types import Content, Part, Tool, FunctionDeclaration
 from loguru import logger
 import traceback
 
-from tools import choose_game_type_tool, set_param_tool, search_param_tool
+from tools import choose_game_type_tool, set_param_tool, search_param_tool, duckduckgo_search_tool
 from state import state
 from game_context import params_settings
 from utils import get_current_game_state, generate
@@ -66,7 +66,7 @@ async def chat_endpoint(msg: Msg):
     try:
         tools_to_use: list[Union[Callable, Tool]] = [
             choose_game_type_tool,
-            search_param_tool
+            duckduckgo_search_tool
         ]
         game_type = state.get('game_type')
         if game_type:
@@ -82,7 +82,7 @@ Available parameters for game type '{game_type}':
 {param_descriptions}
 """
             tools_to_use.append(set_param_tool)
-
+            tools_to_use.append(search_param_tool)
         answer, thoughts = await generate(chat, msg.message, tools=tools_to_use)
         return ChatResp(response=answer, thoughts=thoughts)
     except Exception as e:
