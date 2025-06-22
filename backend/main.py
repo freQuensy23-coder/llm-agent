@@ -33,7 +33,6 @@ generate_embeddings(client, params_settings)
 # Construct path relative to this file
 system_prompt_path = Path(__file__).parent / "system_prompt.md"
 
-# → history starts with your system prompt
 chat: AsyncChat = client.aio.chats.create(
     model=CHAT_MODEL,
     history=[Content(
@@ -41,10 +40,6 @@ chat: AsyncChat = client.aio.chats.create(
         parts=[Part(text=open(system_prompt_path).read())]
     )]
 )
-
-# ──────────────────────────────────────────────── #
-#  FastAPI     (uvicorn main:app --reload)
-# ──────────────────────────────────────────────── #
 app = FastAPI(title="Gemini-Game-Config Chat")
 
 app.add_middleware(
